@@ -1,9 +1,7 @@
-//Checks if a project has a property called minecraft.
-if (project.hasProperty("minecraft"))
-    {
-    version = "${project.minecraft.version}-${version_major}.${version_minor}.${version_revis}b" + getBuildNumber()
-    }
+if (project.hasProperty("minecraft.version"))
+    version = "${project.minecraft.version}-${version_major}.${version_minor}.${version_revis}b"
 else 
+<<<<<<< HEAD
     (
     version = "${version_major}.${version_minor}.${version_revis}b" + getBuildNumber()
     )
@@ -31,7 +29,15 @@ def getBuildNumber() {
     }
     return getDate()
 }
+=======
+    version = "${version_major}.${version_minor}.${version_revis}b"
+>>>>>>> origin/buildScripts
 
+// This is used to set the local version
+if (project.hasProperty("bambooBuildNumber"))
+    version += project.bambooBuildNumber
+else
+    version += getDate()
 println "version = "+ version
 
 def getDate() {
@@ -39,5 +45,3 @@ def getDate() {
     def formattedDate = date.format('yyyyMMddHHmmss')
     return formattedDate
 }
-
-file("${archivebase}.txt").text = version;

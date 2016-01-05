@@ -37,6 +37,7 @@ repositories {
         url 'http://dvs1.progwml6.com/files/maven'
     }
     maven {
+<<<<<<< HEAD
         name 'ProjectRed'
         url 'http://files.projectredwiki.com/maven/'
     }
@@ -44,4 +45,9 @@ repositories {
     //    name 'ColoredLightCore'
     //    url "http://coloredlightscore.us.to/maven/clc/"
     //}
+=======
+        name 'ColoredLightCore'
+        url "http://coloredlightscore.us.to/maven/clc/"
+    }
+>>>>>>> origin/buildScripts
 }
