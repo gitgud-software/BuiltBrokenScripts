@@ -27,14 +27,7 @@ minecraft {
     replace "@MAJOR@", version_major
     replace "@MINOR@", version_minor
     replace "@REVIS@", version_revis
-<<<<<<< 7a0459181d4bd4875d01945be83aa2377afffafe
     replace "@BUILD@", project.getBuildNumber()
-=======
-    replace "@BUILD@", project.getBuildNumber {
-        from getBuildNumber()
-     
-     }
->>>>>>> attempt to fix getBuildNumber
 }
 
 //Prints the minecraft version to console.
