@@ -2,7 +2,7 @@
 
 =======
 //Adds variable for getting build numbers       
-ext.buildNumber = {
+ext.getBuildNumber = {
     if (System.getenv("BUILD_NUMBER") != null) 
     {
         return "${System.getenv("BUILD_NUMBER")}"
