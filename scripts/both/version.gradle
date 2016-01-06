@@ -1,3 +1,5 @@
+
+
 //Checks if a project has a property called minecraft.
 if (project.hasProperty("minecraft"))
     {
