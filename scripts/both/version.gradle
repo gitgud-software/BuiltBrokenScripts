@@ -7,6 +7,7 @@ else
     (
     version = "${version_major}.${version_minor}.${version_revis}b" + getBuildNumber
     )
+
 //Adds variable for getting build numbers       
 ext.getBuildNumber {
     if (System.getenv("BUILD_NUMBER") != null) 
