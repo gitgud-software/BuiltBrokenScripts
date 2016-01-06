@@ -41,4 +41,5 @@ task printDependencies {
      mustRunAfter "setupDevWorkspace"
      mustRunAfter "setupCIWorkspace"
 }
+
 tasks.build.dependsOn printDependencies
