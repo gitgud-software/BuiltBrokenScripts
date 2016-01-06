@@ -1,13 +1,3 @@
-//Checks if a project has a property called minecraft.
-if (project.hasProperty("minecraft"))
-    {
-    version = "${project.minecraft.version}-${version_major}.${version_minor}.${version_revis}b" + getBuildNumber
-    }
-else 
-    (
-    version = "${version_major}.${version_minor}.${version_revis}b" + getBuildNumber
-    )
-
 //Adds variable for getting build numbers       
 ext.getBuildNumber {
     if (System.getenv("BUILD_NUMBER") != null) 
@@ -32,6 +22,16 @@ ext.getBuildNumber {
     }
     return getDate()
 }
+
+//Checks if a project has a property called minecraft.
+if (project.hasProperty("minecraft"))
+    {
+    version = "${project.minecraft.version}-${version_major}.${version_minor}.${version_revis}b" + getBuildNumber
+    }
+else 
+    (
+    version = "${version_major}.${version_minor}.${version_revis}b" + getBuildNumber
+    )
 
 println "version = "+ version
 
