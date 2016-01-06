@@ -21,9 +21,6 @@ javadoc {
     source = sourceSets.main.allJava
 }
 
-javadoc.dependsOn(sourceMainJava)
-javadoc.dependsOn(sourceMainScala)
-
 def currentJvm = org.gradle.internal.jvm.Jvm.current()
 println "Current Java version = " + currentJvm
 
@@ -65,7 +62,6 @@ task javadocJar(type: Jar, dependsOn: 'javadoc') {
      //sets where the jars go to.
      destinationDir = file 'output'
      mustRunAfter "sourceMainScala"
-     mustRunAfter "sourceMainJava"
 }
 
 task deobfJar(type: Jar) {
@@ -80,9 +76,7 @@ task deobfJar(type: Jar) {
      manifest = project.manifest {
         from sharedManifest
     }
-     mustRunAfter "sourceMainScala"
-     mustRunAfter "sourceMainJava"
-  
+     mustRunAfter "jar" 
 }
 
 task sourcesJar(type: Jar) {
@@ -94,8 +88,7 @@ task sourcesJar(type: Jar) {
      manifest = project.manifest {
         from sharedManifest
      }
-     mustRunAfter "sourceMainScala"
-     mustRunAfter "sourceMainJava"
+     mustRunAfter "jar"
 }
 
 //copies the build.properties to the output dir for maven publishing.
