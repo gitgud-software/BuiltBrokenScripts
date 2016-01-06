@@ -27,13 +27,7 @@ minecraft {
     replace "@MAJOR@", version_major
     replace "@MINOR@", version_minor
     replace "@REVIS@", version_revis
-	
-    if (project.hasProperty("bambooBuildNumber")) {
-        replace "@BUILD@", project.bambooBuildNumber
-    }
-    else {
-        replace "@BUILD@", getDate()
-    }
+    replace "@BUILD@", getBuildNumber
 }
 
 println "Current Minecraft version = " + minecraft.apiVersion

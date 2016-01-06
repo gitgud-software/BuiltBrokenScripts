@@ -1,14 +1,14 @@
 //Checks if a project has a property called minecraft.
 if (project.hasProperty("minecraft"))
     {
-    version = "${project.minecraft.version}-${version_major}.${version_minor}.${version_revis}b" + getBuildNumber()
+    version = "${project.minecraft.version}-${version_major}.${version_minor}.${version_revis}b" + getBuildNumber
     }
 else 
     (
-    version = "${version_major}.${version_minor}.${version_revis}b" + getBuildNumber()
+    version = "${version_major}.${version_minor}.${version_revis}b" + getBuildNumber
     )
 //Adds variable for getting build numbers       
-def getBuildNumber() {
+ext.getBuildNumber {
     if (System.getenv("BUILD_NUMBER") != null) 
     {
         return "${System.getenv("BUILD_NUMBER")}"
