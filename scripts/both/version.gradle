@@ -6,7 +6,8 @@ if (project.hasProperty("minecraft"))
 else 
     (
     version = "${version_major}.${version_minor}.${version_revis}b" + project.getBuildNumber()
+    )
 
-    println "version = "+ version
+println "version = "+ version
 
 file("${archivebase}.txt").text = version;
