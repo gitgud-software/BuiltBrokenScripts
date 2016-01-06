@@ -1,31 +1,4 @@
-<<<<<<< 2b6f82c224989cba864791946703a2852a5f9e51
 
-=======
-//Adds variable for getting build numbers       
-ext.getBuildNumber = {
-    if (System.getenv("BUILD_NUMBER") != null) 
-    {
-        return "${System.getenv("BUILD_NUMBER")}"
-    }
-    else if (project.hasProperty("bambooBuildNumber")) 
-    {
-        return project.bambooBuildNumber
-    }
-    else if (System.getenv("DRONE_BUILD_NUMBER") != null) 
-    {
-        return "${System.getenv("DRONE_BUILD_NUMBER")}"
-    }
-    else if (System.getenv("TRAVIS_BUILD_NUMBER") != null) 
-    {
-        return "${System.getenv("TRAVIS_BUILD_NUMBER")}"
-    }
-    else if (project.hasProperty("sbmBuild"))
-    {
-        return project.sbmBuild
-    }
-    return getDate()
-}
->>>>>>> reflect what killjoy sugguested
 
 //Checks if a project has a property called minecraft.
 if (project.hasProperty("minecraft"))
