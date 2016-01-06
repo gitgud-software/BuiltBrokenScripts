@@ -31,7 +31,7 @@ minecraft {
     replace "@BUILD@", project.getBuildNumber()
 =======
     replace "@BUILD@", project.getBuildNumber {
-        from getBuildNumber
+        from getBuildNumber()
      
      }
 >>>>>>> attempt to fix getBuildNumber
