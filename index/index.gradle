@@ -1,9 +1,5 @@
 //This is all the build scripts we use in the submodule
-<<<<<<< c17ea1c549820504ec0a5222c4890c6760f6d796
 apply from: 'https://raw.githubusercontent.com/BuiltBrokenModding/BuiltBrokenScripts/dmodtest/scripts/both/getbuildnumber.gradle'
-=======
-
->>>>>>> move index sctipts to the index folder and move getbuildnumber to its own
 apply from: 'https://raw.githubusercontent.com/BuiltBrokenModding/BuiltBrokenScripts/dmodtest/scripts/forge/builtbroken.gradle'
 apply from: 'https://raw.githubusercontent.com/BuiltBrokenModding/BuiltBrokenScripts/dmodtest/index/index-both.gradle'
 apply from: 'https://raw.githubusercontent.com/BuiltBrokenModding/BuiltBrokenScripts/dmodtest/scripts/forge/forgeV.gradle'
