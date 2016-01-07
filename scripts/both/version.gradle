@@ -3,11 +3,11 @@
 //Checks if a project has a property called minecraft.
 if (project.hasProperty("minecraft"))
     {
-    version = "${project.minecraft.version}-${version_major}.${version_minor}.${version_revis}b" + getBuildNumber()
+    version = "${project.minecraft.version}-${version_major}.${version_minor}.${version_revis}b" + project.getBuildNumber()
     }
 else 
     (
-    version = "${version_major}.${version_minor}.${version_revis}b" + getBuildNumber()
+    version = "${version_major}.${version_minor}.${version_revis}b" + project.getBuildNumber()
     )
 
 println "version = "+ version
