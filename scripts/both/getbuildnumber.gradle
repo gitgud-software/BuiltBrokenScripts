@@ -21,13 +21,10 @@ ext.getBuildNumber = {
         return project.sbmBuild
     }
     return getDate()
-<<<<<<< 90ed3f167402cfc35abe1c3fe8c06c9876f5fa42
 }
 
 def getDate() {
     def date = new Date()
     def formattedDate = date.format('yyyyMMddHHmmss')
     return formattedDate
-=======
->>>>>>> move index sctipts to the index folder and move getbuildnumber to its own
 }
