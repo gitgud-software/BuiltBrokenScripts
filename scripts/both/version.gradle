@@ -12,10 +12,4 @@ else
 
 println "version = "+ version
 
-def getDate() {
-    def date = new Date()
-    def formattedDate = date.format('yyyyMMddHHmmss')
-    return formattedDate
-}
-
 file("${archivebase}.txt").text = version;
